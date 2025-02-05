@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Details</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="detail-container">
+        <img src="<%= imageUrl %>" alt="Country Image" class="detail-image">
+        <div class="detail-content">
+            <h1 class="detail-title"><%= name %></h1>
+            <p class="detail-subtitle">Continent: <%= continent %></p>
+            <p class="detail-population">Population: <%= population %></p>
+           <% if(population > 40000000){ %>
+                <p>"This country has an above average population."</p>
+          <%  } else {  %>
+                <p>"This country has an under average population."</p>
+         <%   }   %>
+            <p class="detail-description"><%= description %></p>
+            <a href="/countries" class="back-button">Back to Countries</a>
+        </div>
+    </div>
+</body>
+</html>
